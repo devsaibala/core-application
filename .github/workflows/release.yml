@@ -18,7 +18,6 @@ jobs:
      steps:
       - name: Check out code
         uses: actions/checkout@v2
-        
       - name: deploy App
         run: |
          echo " runing App deployment now "
@@ -28,7 +27,6 @@ jobs:
      steps:
       - name: Check out code
         uses: actions/checkout@v2
-        
       - name: deploy database
         run: |
          echo " runing database deployment now "
