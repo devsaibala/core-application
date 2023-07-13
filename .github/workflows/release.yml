@@ -5,7 +5,10 @@ on:
     inputs:
       app:
         type: boolean
-        description: Inclcue App
+        description: Deploy App
+      database:
+        type: boolean
+        description: Deloy database
        
 
 jobs:
@@ -19,4 +22,14 @@ jobs:
       - name: deploy App
         run: |
          echo " runing App deployment now "
+  database-deploy:
+     if: ${{ github.event.inputs.database }} == true
+     runs-on: ubuntu-latest
+     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        
+      - name: deploy database
+        run: |
+         echo " runing database deployment now "
           
