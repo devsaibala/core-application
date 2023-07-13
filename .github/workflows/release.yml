@@ -10,3 +10,16 @@ on:
         - App
         - Databse
         - Batch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        
+      - name: Cleanup
+        run: |
+         echo " ${{ github.event.inputs.component }} "
+          
