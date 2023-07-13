@@ -3,8 +3,6 @@ name: release
 on:
   workflow_dispatch:
     inputs:
-      message:
-        required: true
       app:
         type: boolean
         description: Inclcue App
@@ -20,5 +18,5 @@ jobs:
         
       - name: deploy App
         run: |
-         echo " ${{ github.event.inputs.app }} "
+         echo " runing App deployment now "
           
