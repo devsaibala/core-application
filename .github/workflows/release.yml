@@ -3,13 +3,10 @@ name: release
 on:
   workflow_dispatch:
     inputs:
-      component:
-        type: choice
-        description: Make a choice of component for release
-        options:
-        - App
-        - Databse
-        - Batch
+      app:
+        type: boolean
+        description: Inclcue App
+       
 
 jobs:
   build:
@@ -21,5 +18,5 @@ jobs:
         
       - name: Cleanup
         run: |
-         echo " ${{ github.event.inputs.component }} "
+         echo " ${{ github.event.inputs.app }} "
           
