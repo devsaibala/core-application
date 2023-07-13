@@ -3,16 +3,10 @@ name: release
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        type: component
-        description: Select the component
-      boolean:
-        type: boolean
-        description: True or False
-      choice:
+      component:
         type: choice
-        description: Make a choice
+        description: Make a choice of component for release
         options:
-        - foo
-        - bar
-        - baz
+        - App
+        - Databse
+        - Batch
