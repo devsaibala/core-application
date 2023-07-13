@@ -3,6 +3,8 @@ name: release
 on:
   workflow_dispatch:
     inputs:
+      message:
+        required: true
       app:
         type: boolean
         description: Inclcue App
