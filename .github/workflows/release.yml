@@ -11,10 +11,10 @@ on:
        
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
+  app-deploy:
+     if: ${{ github.event.inputs.app }} == true
+     runs-on: ubuntu-latest
+     steps:
       - name: Check out code
         uses: actions/checkout@v2
         
