@@ -8,7 +8,7 @@ on:
         description: Deploy App
       database:
         type: boolean
-        description: Deloy database
+        description: Deploy database
        
 
 jobs:
