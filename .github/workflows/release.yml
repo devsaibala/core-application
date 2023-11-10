@@ -15,7 +15,6 @@ jobs:
   app-deploy:
      if: ${{ github.event.inputs.app =='true' }}
      runs-on: ubuntu-latest
-     environment: 'DEV'
      steps:
       - name: Check out code
         uses: actions/checkout@v2
